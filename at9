@@ -1,0 +1,26 @@
+package repeticao;
+
+import java.util.Scanner;
+
+public class atividade9 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		String nome1 = "";
+        int idade1 = 0; 
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Informe o nome da pessoa (" + i + "/10): ");
+            String nome = ler.next();
+            System.out.print("Informe a idade da pessoa (" + i + "/10): ");
+       int idade = ler.nextInt();
+       if (i == 1 || idade < idade1) {  
+                idade1 = idade;
+                nome1 = nome;
+            }
+        }
+    System.out.println("A pessoa mais nova é: " + nome1);
+        ler.close();
+		
+		
+	}
+}
