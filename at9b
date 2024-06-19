@@ -1,0 +1,25 @@
+package repeticao;
+
+import java.util.Scanner;
+
+public class atividade9b {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		String nome1 = "";
+        int idade1 = 0;  
+        int contador = 1;
+        while (contador <= 10) {
+            System.out.print("Informe o nome da pessoa (" + contador + "/10): ");
+            String nome = ler.next();
+            System.out.print("Informe a idade da pessoa (" + contador + "/10): ");
+         int idade = ler.nextInt();
+         if (contador == 1 || idade < idade1) { 
+               nome1 = nome;
+            }
+            contador++;
+        }
+        System.out.println("A pessoa mais nova é: " + nome1);
+       ler.close();
+	}
+}
